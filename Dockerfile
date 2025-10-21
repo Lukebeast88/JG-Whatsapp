@@ -1,6 +1,17 @@
 FROM node:20-alpine
+
+# Workdir
 WORKDIR /app
-RUN npm i -g evolution-api@latest
-COPY server.mjs .
+
+# Install deps
+COPY package.json ./
+RUN npm i --omit=dev
+
+# Copy app
+COPY server.mjs ./server.mjs
+
+# Health (optional small endpoint not needed here)
 EXPOSE 8080
-CMD ["node", "server.mjs"]
+
+# Start
+CMD ["npm","run","start"]
