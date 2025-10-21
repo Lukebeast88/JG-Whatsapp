@@ -2,10 +2,14 @@
   "name": "jg-whatsapp",
   "version": "1.0.0",
   "type": "module",
-  "scripts": { "start": "node server.mjs" },
+  "private": true,
+  "scripts": {
+    "start": "node server.mjs"
+  },
   "dependencies": {
     "@whiskeysockets/baileys": "^6.7.8",
     "express": "^4.19.2",
-    "qrcode": "^1.5.3"
+    "qrcode": "^1.5.3",
+    "node-fetch": "^3.3.2"
   }
 }
