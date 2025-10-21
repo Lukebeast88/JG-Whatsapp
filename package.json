@@ -7,6 +7,6 @@
     "start": "node server.mjs"
   },
   "dependencies": {
-    "evolution-api": "latest"
+    "evolution-api": "github:EvolutionAPI/evolution-api"
   }
 }
